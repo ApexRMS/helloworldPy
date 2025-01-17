@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="helloworldPy" displayName="Hello World (Python)" version="1.0.0">
+
+  <!--Scenario Datasheets-->
+
+  <!--Model Inputs-->
+  <dataSheet name="InputDatasheet" displayName="Inputs">
+    <column name="x" dataType="Double" displayName="Value for x"/>
+    <column name="a" dataType="Integer" displayName="Value for a"/>
+  </dataSheet>
+
+  <!--Model Outputs-->
+  <dataSheet name="OutputDatasheet" displayName="Outputs">
+    <column name="y" dataType="Double" displayName="Value for y"/>
+  </dataSheet>
+
+  <!--Transformers-->
+
+  <transformer
+    name="Main"
+    displayName="Run Hello World (Python)"
+    programArguments="model.py"
+    condaEnv="helloworldPy.yml"
+    condaEnvVersion="1">
+      <dataSheet name="InputDatasheet" type="Input"/>
+      <dataSheet name="OutputDatasheet" type="Output"/>
+  </transformer>
+
+  <!--Layouts-->
+
+  <!--Scenario Datasheets Layout-->
+  <layout type="Scenario">
+    <item name="InputDatasheet"/>
+    <item name="OutputDatasheet"/>
+  </layout>
+
+</package>
