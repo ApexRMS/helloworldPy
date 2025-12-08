@@ -3,5 +3,5 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - pandas=2.3.3
-  - pysyncrosim=2.0.1
+  - pandas=2.2.3
+  - pysyncrosim=2.1.3
